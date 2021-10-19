@@ -18,7 +18,7 @@ for movie in movies:
 
 # Store & update movie list somewhere like Google Sheet
 
-# If there is a new name, send it in Telegram via Pam
+# TODO: If there is a new name, send it in Telegram via Pam
 bot = telepot.Bot(creds.TELEGRAM_BOT_PAM_ID) # calling Pam on Telegram
 bot.sendMessage(creds.TELEGRAM_MY_PERSONAL_ID, "my ID is working") # my personal ID on telegram.
 
@@ -27,6 +27,6 @@ bot.sendMessage(creds.TELEGRAM_MY_PERSONAL_ID, "my ID is working") # my personal
 
 print("success")
 
-# Include Image of the Movie
+# TODO: Include Image of the Movie
 
-# Include YouTube URL for the trailer of the movie.
+# TODO: Include YouTube URL for the trailer of the movie.
