@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import telepot
-import creds
+import os
 
 # Go to site
 url = 'https://in.bookmyshow.com/explore/movies-hyderabad?languages=english'
@@ -19,8 +19,8 @@ for movie in movies:
 # Store & update movie list somewhere like Google Sheet
 
 # TODO: If there is a new name, send it in Telegram via Pam
-bot = telepot.Bot(creds.TELEGRAM_BOT_PAM_ID) # calling Pam on Telegram
-bot.sendMessage(creds.TELEGRAM_MY_PERSONAL_ID, "my ID is working") # my personal ID on telegram.
+bot = telepot.Bot(os.environ.get('TELEGRAM_BOT_PAM_ID')) # calling Pam on Telegram
+bot.sendMessage(os.environ.get('TELEGRAM_MY_PERSONAL_ID'), "my ID is working") # my personal ID on telegram.
 
 # for movie in movies_list:
 #     bot.sendMessage(creds.TELEGRAM_MY_PERSONAL_ID, movie) # my personal ID on telegram.
